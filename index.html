@@ -265,11 +265,11 @@
     <div 
     class="w-full h-full items-center justify-center bg-black/50 fixed top-0 left-0 z-50 hidden"
     id="modal-cart">
-        <div class="min-w-[90%] md:min-w-[650px] bg-white rounded p-2 flex flex-col justify-center">
-            <h2 class="text-sm font-bold text-center">Seu carrinho</h2>
+        <div class="min-w-[90%] md:min-w-[650px] bg-white rounded p-4 md:p-6 flex flex-col justify-center">
+            <h2 class="text-lg font-bold text-center mb-4 md:text-2xl">Seu carrinho</h2>
 
             <div id="cart-items" class="flex flex-col justify-between mb-3"></div>
-            <p class="text-sm">Total: <span class="text-sm" id="cart-total">R$00.00</span> </p>
+            <p class="text-sm font-bold">Total: <span class="text-sm font-bold" id="cart-total">R$00.00</span> </p>
 
             <label class="font-bold mt-2" for="address">Endereço de Entrega:</label>
             <input 
@@ -283,7 +283,7 @@
 
             <div class="flex justify-between items-center w-full mt-4 mb-2">
                 <button id="close-modal-btn">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white p-1 md:px-6 rounded">Finalizar pedido</button>
+                <button id="checkout-btn" class="bg-green-500 text-white p-2 md:px-6 rounded">Finalizar pedido</button>
             </div>
         </div>
     </div>
