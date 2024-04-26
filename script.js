@@ -1,4 +1,5 @@
 const menu = document.getElementById("menu")
+const menuDrinks = document.getElementById("menu-drinks")
 const cartBtn = document.getElementById("cart-btn")
 const cartCount = document.getElementById("cart-count")
 const cartItems = document.getElementById("cart-items")
@@ -28,6 +29,19 @@ closeModalBtn.addEventListener("click", ()=>{
 })
 
 menu.addEventListener("click", (event)=>{
+    console.log(event.target)
+
+    let parentButton = event.target.closest(".add-to-cart-btn")
+
+    if(parentButton){
+        const name = parentButton.getAttribute("data-name")
+        const price = parseFloat(parentButton.getAttribute("data-price"))
+        
+        addToCart(name, price)
+    }
+})
+
+menuDrinks.addEventListener("click", (event)=>{
     console.log(event.target)
 
     let parentButton = event.target.closest(".add-to-cart-btn")
@@ -74,7 +88,7 @@ function updateCardModal(){
                 </div>
 
                 <div>
-                    <button>
+                    <button class="remove-btn" data-name="${item.name}">
                         Remover
                     </button>
                 </div>
@@ -92,4 +106,29 @@ function updateCardModal(){
     })
     
     cartCount.innerHTML = cart.length
+}
+
+cartItems.addEventListener("click", (event)=>{
+    if(event.target.classList.contains("remove-btn")){
+        const name = event.target.getAttribute("data-name")
+        removeItemCart(name)
+    }
+    
+})
+
+function removeItemCart(name){
+    const index = cart.findIndex(item => item.name == name)
+
+    if(index != -1){
+        const item = cart[index]
+
+        if(item.quantity > 1){
+            item.quantity -= 1
+            updateCardModal()
+            return
+        }else{
+            cart.splice(index, 1)
+            updateCardModal()
+        }
+    }
 }
