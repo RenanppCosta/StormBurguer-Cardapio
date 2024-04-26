@@ -7,17 +7,20 @@
 ## :books: Funcionalidades
 * <b>Front-end: Javascript com Tailwind </b>: Utilização de Javascript puro com Tailwind.css
 * <b>Responsividade</b>: Projeto responsivo para qualquer tipo de tela
+* <b>Carrinho</b>: Carrinho no qual você pode adicionar cada produto da loja e também remover
+* <b>Pedido</b>: Finalização do pedido para envia-lo ao whatsapp com algumas validações
 
 ## :wrench: Tecnologias utilizadas
 * Javascript;
 * Tailwind.css;
+* Toastify-js; 
 
 ## :rocket: Rodando o projeto
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
 ```
 <npm i ou npm install>
 ```
-Após instaladas as dependências, dê o comando seguinte para rodar a aplicação:
+Após instaladas as dependências, dê o comando seguinte para rodar o tailwind:
 ```
 <npm run dev> 
 ```
@@ -37,4 +40,4 @@ Após instaladas as dependências, dê o comando seguinte para rodar a aplicaç�
 </table>
 
 ## :dart: Status do projeto
-* Projeto em andamento
+* Projeto Finalizado ✔
